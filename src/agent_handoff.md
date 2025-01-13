@@ -4,17 +4,17 @@ The Programmatic Agent Handoff pattern allows application code to dynamically ma
 
 In this example, we'll explore how customer queries can be routed between a **Billing Agent** and a **Tech Support** Agent, depending on the nature of the query. The implementation also supports an interactive session where users can ask multiple questions in a single run.
 
-The following post will look at router-based agent handoff for a more structured approach.
+The following post will look at [router-based agent handoff]('./router_handoff.md') for an alternative approach.
 
 ## Example Code: Dynamic Agent Handoff
 
-You can find the complete implementation in the file: [dynamic_agent_handoff](./agent_handoff.py).
+You can find the complete implementation in the file: [agent_handoff](./agent_handoff.py).
 
 ## How It Works
 
 The control flow follows the **Programmatic Agent Handoff** pattern, where the application code determines transitions between agents dynamically in a continuous, interactive session.
 
-![Agent Handoff Demo](../agent-handoff.gif)
+![Agent Handoff Demo](./agent-handoff.gif)
 
 ### 1. Prompt the User Query
 

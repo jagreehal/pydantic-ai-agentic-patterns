@@ -3,11 +3,12 @@ from dataclasses import dataclass
 from typing import Optional
 
 import dotenv
-import logfire
+
+# import logfire
 from pydantic import BaseModel, Field
 from pydantic_ai import Agent
 
-logfire.configure(send_to_logfire="if-token-present")
+# logfire.configure(send_to_logfire="if-token-present")
 
 dotenv.load_dotenv()
 
@@ -21,7 +22,9 @@ class AgentDependencies:
 # --- Result Models ---
 class AgentResult(BaseModel):
     response: str = Field(description="Response to the customer")
-    target_agent: Optional[str] = Field(description="Agent to hand over to", default=None)
+    target_agent: Optional[str] = Field(
+        description="Agent to hand over to", default=None
+    )
 
 
 # --- Agents ---
